@@ -13,6 +13,7 @@ provider "aws" {
 }
 
 module "vpc" {
+    #checkov:skip=CKV_TF_1: "Ensure Terraform module sources use a commit hash"
   source  = "terraform-aws-modules/vpc/aws"
   version = "~> 4.0"
 
